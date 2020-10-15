@@ -132,7 +132,7 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 
 \begin{abstract}
-This document contains the proof of the property C=AB-BA, iff Trace(C) = 0
+This document contains the proof of the property C=AB-BA, iff tr\brak{C} = 0.
 \end{abstract}
 Download the python code from 
 \begin{lstlisting}
@@ -151,25 +151,24 @@ Let,
 \vec{C}=\myvec{C_{11}&C_{12}\\C_{21}&C_{22}}
 \end{align}
 be a 2$\times$2 matrix. We inquire when it is possible to find 2$\times$2 matrices $\vec{A}$ and $\vec{B}$ such that $\vec{C}$=$\vec{AB-BA}$. Prove that such matrices can be found if and only if $C_{11}+C_{22}$=0.
-
 \section{Solution}
 We have to find,
 \begin{align}
- Trace(\vec{C}) = C_{11}+C_{22} = Trace(\vec{AB}-\vec{BA})\\
- \implies  Trace(\vec{C}) = Trace(\vec{AB})-Trace(\vec{BA})\label{s}
+ tr\brak{\vec{C}} = C_{11}+C_{22} = tr\brak{\vec{AB}-\vec{BA}}\\
+ \implies  tr\brak{\vec{C}} = tr\brak{\vec{AB}}-tr\brak{\vec{BA}}\label{s}
 \end{align}
 We know that,
 \begin{align}
-Trace(\vec{AB}) = \sum_{i=1}^2(\vec{AB})_{ii}\\
+tr\brak{\vec{AB}} = \sum_{i=1}^2(\vec{AB})_{ii}\\
 \implies \sum_{i=1}^2\sum_{j=1}^2a_{ij}b_{ji}\\
 \implies \sum_{j=1}^2\sum_{i=1}^2b_{ji}a_{ij}\\
-\implies Trace(\vec{AB}) = \sum_{j=1}^2\vec{BA}_{jj}\\
-\implies Trace(\vec{AB}) = Trace(\vec{BA})
+\implies tr\brak{\vec{AB}} = \sum_{j=1}^2\vec{BA}_{jj}\\
+\implies tr\brak{\vec{AB}} = tr\brak{\vec{BA}}
 \label{t}
 \end{align}
-Substituting equation \eqref{t} to \eqref{s} we getm
+Substituting equation \eqref{t} to \eqref{s} we get
 \begin{align}
-\implies  Trace(\vec{C}) = Trace(\vec{AB})-Trace(\vec{BA}) = 0
+\implies  tr\brak{\vec{C}} = tr\brak{\vec{AB}}-tr\brak{\vec{BA}} = 0
 \end{align}
 Hence, Proved
 
